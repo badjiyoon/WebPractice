@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width"> </head>
+
+<body>
+    <h1>표 만들기</h1>
+    <h2>colgroup</h2>
+    <table border="1" width="100%" summary="월별 스마트폰, 태블릿PC, 데스크탑PC 판매현황">
+        <caption>상품에 따른 월별 판매현황</caption>
+        <colgroup>
+            <col width="20%">
+                <col width="25%">
+                    <col width="25%">
+                        <col width="20%">
+        </colgroup>
+        <thaed>
+            <tr>
+                <th rowspan="2" scope="col">구분</th>
+                <th colspan="3" scope="colgroup">상품종류</th>
+            </tr>
+            <tr>
+                <th scope="col">스마트폰</th>
+                <th scope="col">태블릿PC</th>
+                <th scope="col">데스크탑PC</th>
+            </tr>
+        </thaed>
+        <tbody>
+            <tr>
+                <th scope="row">1월</th>
+                <td>5만대</td>
+                <td>3만대</td>
+                <td>1만대</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>id, headers</h2>
+    <table border="1" width="100%" summary="월별 스마트폰, 태블릿PC, 데스크탑PC 판매현황">
+        <caption>상품에 따른 월별 판매현황</caption>
+        <colgroup>
+            <col width="20%">
+                <col width="25%">
+                    <col width="25%">
+                        <col width="30%">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" id="division">구분</th>
+                                    <th colspan="3" id="product">상품종류</th>
+                                </tr>
+                                <tr>
+                                    <th headers="product" id="smartphone">스마트폰</th>
+                                    <th headers="product" id="tablepc">태블릿PC</th>
+                                    <th headers="product" id="pc">데스크탑PC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th headers="division">1월</th>
+                                    <td headers="product smartphone">5만대</td>
+                                    <td headers="product tablepc">3만대</td>
+                                    <td headers="product product pc">1만대</td>
+                                </tr>
+                            </tbody>
+        </colgroup>
+    </table>
+</body>
+
+</html>
